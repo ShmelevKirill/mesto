@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="pages/index.css">
+</head>
+<body>
+<div class="page">
+    <header class="header">
+    <img class="header__logo" alt="Логотип Mesto Russia"
+      src="./images/logo.svg"/>
+    </header>
+<main class="content">
+  <section class="profile">
+    <button class="profile__avatar profile__avatar_button" type="button" title="сменить аватар">
+    <img class="profile__avatar" alt="фото профиля" src="./images/avatar.jpg"/>
+    </button>
+    <div class="profile__info">
+      <h1 class="profile__info_name">Жак-Ив Кусто</h1>
+      <button class="profile__info_edit button" type="button" title="редактировать профиль"></button>
+      <h2 class="profile__info_status">Исследователь океана</h2>
+    </div>
+    <button class="profile__button button" type="button" title="добавить фотографию"></button>
+  </section>
+  <section class="elements">
+    <ul class="elements__list">
+      <li class="elements__item">
+        <button class="elements__trash button" type="button" title="удалить фото"></button>
+        <img class="elements__image" alt="Домбай" src="./images/dombay.jpg"/>
+        
+        <div class="elements__item_container">
+          <h2 class="elements__item_title">Домбай, Россия</h2>
+          <button class="elements__like_button" type="button" title="Оценить фотографию" 
+          aria-label="Оценить фотографию"></button>
+        </div>
+      </li>
+      <li class="elements__item">
+        <button class="elements__trash button" type="button" title="удалить фото"></button>
+        <img class="elements__image" alt="Айбзее - озеро в Баварии, Германия" src="./images/eibsee.jpg"/>
+        <div class="elements__item_container">
+          <h2 class="elements__item_title">Айбзее, Германия</h2>
+          <button class="elements__like_button" type="button" title="Оценить фотографию" 
+          aria-label="Оценить фотографию"></button>
+        </div>
+      </li>
+      <li class="elements__item">
+        <button class="elements__trash button" type="button" title="удалить фото"></button>
+        <img class="elements__image" alt="Эльбрус" src="./images/elbrus.jpg"/>
+        <div class="elements__item_container">
+          <h2 class="elements__item_title">Эльбрус, Россия</h2>
+          <button class="elements__like_button" type="button" title="Оценить фотографию" 
+          aria-label="Оценить фотографию"></button>
+        </div>
+      </li>
+      <li class="elements__item">
+        <button class="elements__trash button" type="button" title="удалить фото"></button>
+        <img class="elements__image" alt="Карачаевск" src="./images/karachaevsk.jpg"/>
+        <div class="elements__item_container">
+          <h2 class="elements__item_title">Карачаевск, Россия</h2>
+          <button class="elements__like_button" type="button" title="Оценить фотографию" 
+          aria-label="Оценить фотографию"></button>
+        </div>
+      </li>
+      <li class="elements__item">
+        <button class="elements__trash button" type="button" title="удалить фото"></button>
+        <img class="elements__image" alt="Плитвицкие озёра, Хорватия" src="./images/plitvice.jpg"/>
+        <div class="elements__item_container">
+          <h2 class="elements__item_title">Плитвицкие озёра, Хорватия</h2>
+          <button class="elements__like_button" type="button" title="Оценить фотографию" 
+          aria-label="Оценить фотографию"></button>
+        </div>
+      </li>
+      <li class="elements__item">
+        <button class="elements__trash button" type="button" title="удалить фото"></button>
+        <img class="elements__image" alt="Озеро Тринити" src="./images/trinity.jpg"/>
+        <div class="elements__item_container">
+          <h2 class="elements__item_title">Озеро Тринити, США</h2>
+          <button class="elements__like_button" type="button" title="Оценить фотографию" 
+          aria-label="Оценить фотографию"></button>
+        </div>
+      </li>
+    </ul>
+  </section>   
+</main>
+<footer class="footer">
+  <p class="footer__copyright">&copy; 2022. Кирилл Шмелёв</p>
+</footer>
+<div class="popup">
+  <div class="popup__container">
+    <button class="popup_close button" type="button" title="закрыть окно"></button>
+    <form class="popup__container_form">
+      <h2 class="popup__heading">Редактировать профиль</h2>
+      <fieldset class="popup__form popup__form_name">
+      <input type="text" class="popup__form_input popup__form_input-name" name="user-name" placeholder="Имя пользователя" required>
+      </fieldset>
+      <fieldset class="popup__form popup__form_info">
+      <input type="text" class="popup__form_input popup__form_input-info" name="user-info" placeholder="Описание пользователя" required>
+      </fieldset>
+      <fieldset class="popup__form popup__form_save">
+        <button type="submit" class="popup__submit">Сохранить</button>
+      </fieldset>
+    </form>
+  </div>
+</div>
+</div>
+<script src="./scripts/index.js"></script>
+</body>
+</html>

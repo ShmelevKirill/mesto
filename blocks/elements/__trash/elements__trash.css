@@ -1,0 +1,10 @@
+.elements__trash {
+    width: 18px;
+    height: 19px;
+    border: none;
+    background-image: url(../../../images/trash.svg);
+    background-color: transparent;
+    position: absolute;
+    left: 244px;
+    top: 20px;
+}
