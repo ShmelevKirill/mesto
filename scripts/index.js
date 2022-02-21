@@ -1,5 +1,5 @@
 const openProfile = document.querySelector('.profile__edit');
-const closeProfile = document.querySelector('.popup__container_close');
+const closeProfile = document.querySelector('.popup__close');
 const popup = document.querySelector('.popup');
 const profileName = document.querySelector('.profile__name');
 const profileJob = document.querySelector('.profile__status');

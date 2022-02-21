@@ -1,7 +1,7 @@
-.popup__container_close {
+.popup__close {
     width: 32px;
     height: 32px;
-    background-image: url(../../../../images/close.svg);
+    background-image: url(../../../images/close.svg);
     border: none;
     top: -39px;
     right: -435px;
@@ -10,7 +10,7 @@
 }
 
 @media (max-width: 425px) {
-    .popup__container_close {
+    .popup__close {
         top: -29px;
         right: -262px;
         width: 20px;
@@ -19,7 +19,7 @@
 }
 
 @media (max-width: 320px) {
-    .popup__container_close {
+    .popup__close {
         top: -29px;
         right: -262px;
         width: 20px;
