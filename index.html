@@ -4,20 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mesto</title>
+  <title>Место</title>
   <link rel="stylesheet" href="pages/index.css">
 </head>
 
-<body>
+<body class="body">
   <div class="page">
     <header class="header">
       <img class="header__logo" alt="Логотип Mesto Russia" src="./images/logo.svg" />
     </header>
     <main class="content">
       <section class="profile">
-        <button class="profile__avatar profile__avatar_button" type="button" title="сменить аватар">
-          <img class="profile__avatar" alt="фото профиля" src="./images/avatar.jpg" />
-        </button>
+        <img class="profile__avatar" alt="фото профиля" src="./images/avatar.jpg" />
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <button class="profile__edit button" type="button" title="редактировать профиль"></button>
@@ -27,58 +25,52 @@
       </section>
       <section class="elements">
         <ul class="elements__list">
-          <li class="elements__item">
-            <button class="elements__trash button" type="button" title="удалить фото"></button>
-            <img class="elements__image" alt="Домбай" src="./images/dombay.jpg" />
-            <div class="elements__container">
-              <h2 class="elements__title">Домбай, Россия</h2>
-              <button class="elements__like" type="button" title="Оценить фотографию"
-                aria-label="Оценить фотографию"></button>
+          <li class="elements__list_item">
+            <button class="elements__list_item_trash button" type="button" title="удалить фото"></button>
+            <img class="elements__list_item_image" alt="Домбай" src="./images/dombay.jpg" />
+            <div class="elements__list_container">
+              <h2 class="elements__list_container_title">Домбай, Россия</h2>
+              <button class="elements__list_container_like" type="button" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
             </div>
           </li>
-          <li class="elements__item">
-            <button class="elements__trash button" type="button" title="удалить фото"></button>
-            <img class="elements__image" alt="Айбзее - озеро в Баварии, Германия" src="./images/eibsee.jpg" />
-            <div class="elements__container">
-              <h2 class="elements__title">Айбзее, Германия</h2>
-              <button class="elements__like" type="button" title="Оценить фотографию"
-                aria-label="Оценить фотографию"></button>
+          <li class="elements__list_item">
+            <button class="elements__list_item_trash button" type="button" title="удалить фото"></button>
+            <img class="elements__list_item_image" alt="Айбзее - озеро в Баварии, Германия" src="./images/eibsee.jpg" />
+            <div class="elements__list_container">
+              <h2 class="elements__list_container_title">Айбзее, Германия</h2>
+              <button class="elements__list_container_like" type="button" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
             </div>
           </li>
-          <li class="elements__item">
-            <button class="elements__trash button" type="button" title="удалить фото"></button>
-            <img class="elements__image" alt="Эльбрус" src="./images/elbrus.jpg" />
-            <div class="elements__container">
-              <h2 class="elements__title">Эльбрус, Россия</h2>
-              <button class="elements__like" type="button" title="Оценить фотографию"
-                aria-label="Оценить фотографию"></button>
+          <li class="elements__list_item">
+            <button class="elements__list_item_trash button" type="button" title="удалить фото"></button>
+            <img class="elements__list_item_image" alt="Эльбрус" src="./images/elbrus.jpg" />
+            <div class="elements__list_container">
+              <h2 class="elements__list_container_title">Эльбрус, Россия</h2>
+              <button class="elements__list_container_like" type="button" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
             </div>
           </li>
-          <li class="elements__item">
-            <button class="elements__trash button" type="button" title="удалить фото"></button>
-            <img class="elements__image" alt="Карачаевск" src="./images/karachaevsk.jpg" />
-            <div class="elements__container">
-              <h2 class="elements__title">Карачаевск, Россия</h2>
-              <button class="elements__like" type="button" title="Оценить фотографию"
-                aria-label="Оценить фотографию"></button>
+          <li class="elements__list_item">
+            <button class="elements__list_item_trash button" type="button" title="удалить фото"></button>
+            <img class="elements__list_item_image" alt="Карачаевск" src="./images/karachaevsk.jpg" />
+            <div class="elements__list_container">
+              <h2 class="elements__list_container_title">Карачаевск, Россия</h2>
+              <button class="elements__list_container_like" type="button" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
             </div>
           </li>
-          <li class="elements__item">
-            <button class="elements__trash button" type="button" title="удалить фото"></button>
-            <img class="elements__image" alt="Плитвицкие озёра, Хорватия" src="./images/plitvice.jpg" />
-            <div class="elements__container">
-              <h2 class="elements__title">Плитвицкие озёра, Хорватия</h2>
-              <button class="elements__like" type="button" title="Оценить фотографию"
-                aria-label="Оценить фотографию"></button>
+          <li class="elements__list_item">
+            <button class="elements__list_item_trash button" type="button" title="удалить фото"></button>
+            <img class="elements__list_item_image" alt="Плитвицкие озёра, Хорватия" src="./images/plitvice.jpg" />
+            <div class="elements__list_container">
+              <h2 class="elements__list_container_title">Плитвицкие озёра, Хорватия</h2>
+              <button class="elements__list_container_like" type="button" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
             </div>
           </li>
-          <li class="elements__item">
-            <button class="elements__trash button" type="button" title="удалить фото"></button>
-            <img class="elements__image" alt="Озеро Тринити" src="./images/trinity.jpg" />
-            <div class="elements__container">
-              <h2 class="elements__title">Озеро Тринити, США</h2>
-              <button class="elements__like" type="button" title="Оценить фотографию"
-                aria-label="Оценить фотографию"></button>
+          <li class="elements__list_item">
+            <button class="elements__list_item_trash button" type="button" title="удалить фото"></button>
+            <img class="elements__list_item_image" alt="Озеро Тринити" src="./images/trinity.jpg" />
+            <div class="elements__list_container">
+              <h2 class="elements__list_container_title">Озеро Тринити, США</h2>
+              <button class="elements__list_container_like" type="button" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
             </div>
           </li>
         </ul>
@@ -89,20 +81,12 @@
     </footer>
     <div class="popup">
       <div class="popup__container">
-        <button class="popup__close button" type="button" title="закрыть окно"></button>
-        <form class="popup__container-form">
+        <form class="popup__container-form" name="popupuser">
+          <button class="popup__close" type="button" title="закрыть окно"></button>
           <h2 class="popup__heading">Редактировать профиль</h2>
-          <fieldset class="popup__form">
-            <input type="text" class="popup__input popup__input_name" name="user-name"
-              placeholder="Имя пользователя" required>
-          </fieldset>
-          <fieldset class="popup__form">
-            <input type="text" class="popup__input popup__input_info" name="user-info"
-              placeholder="Описание пользователя" required>
-          </fieldset>
-          <fieldset class="popup__form">
-            <button type="submit" class="popup__submit">Сохранить</button>
-          </fieldset>
+          <input type="text" class="popup__input popup__input_name" name="user-name" placeholder="Имя пользователя" required>
+          <input type="text" class="popup__input popup__input_info" name="user-info" placeholder="Описание пользователя" required>
+          <button type="submit" class="popup__submit">Сохранить</button>
         </form>
       </div>
     </div>

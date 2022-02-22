@@ -2,6 +2,19 @@
     font-size: 18px;
     line-height: 22px;
     color: #545454;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .footer__copyright {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__copyright {
+        margin: 0;
+    }
 }
 
 @media (max-width: 425px) {

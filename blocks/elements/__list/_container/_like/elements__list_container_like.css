@@ -1,18 +1,18 @@
-.elements__like {
+.elements__list_container_like {
     height: 19px;
     width: 22px;
     border: none;
-    background-image: url(../../../images/like.svg);
+    background-image: url(../../../../../images/like.svg);
     cursor: pointer;
     align-self: center;
     background-repeat: no-repeat;
-    margin: 0 30px 0 0;
+    margin: 0 20px 0 0;
     padding: 11px;
     box-sizing: border-box;
     transition: all 500ms ease;
 }
 
-.elements__like:hover {
+.elements__list_container_like:hover {
     opacity: 0.5;
 }
 

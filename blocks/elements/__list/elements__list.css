@@ -7,6 +7,12 @@
     gap: 20px 17px;
 }
 
+@media (max-width: 900px) {
+    .elements__list {
+        justify-content: center;
+    }
+}
+
 @media (max-width: 768px) {
     .elements__list {
         justify-content: space-evenly;

@@ -6,7 +6,7 @@
     background-color: #000000;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 580px) {
     .profile__edit {
         width: 18px;
         height: 18px;

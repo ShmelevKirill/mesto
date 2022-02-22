@@ -3,6 +3,7 @@
     height: 50px;
     background: #000000;
     border-radius: 2px;
+    border: none;
     font-size: 18px;
     line-height: 22px;
     text-align: center;
@@ -16,7 +17,7 @@
     opacity: 0.8;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 510px) {
     .popup__submit {
         width: 238px;
         height: 46px;
