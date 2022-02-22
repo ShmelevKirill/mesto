@@ -3,6 +3,7 @@
     width: 22px;
     border: none;
     background-image: url(../../../images/like.svg);
+    background-color: #00000000;
     cursor: pointer;
     align-self: center;
     background-repeat: no-repeat;

@@ -10,6 +10,12 @@
     }
 }
 
+@media (max-width: 645px) {
+    .footer {
+        padding: 0 40px 60px;
+    }
+}
+
 @media (max-width: 425px) {
     .footer {
         max-width: 282px;
@@ -19,6 +25,6 @@
 
 @media (max-width: 320px) {
     .footer {
-        padding-bottom: 36px;
+        padding: 0 19px 36px;
     }
 }

@@ -8,6 +8,7 @@
 @media (max-width: 768px) {
     .header {
         max-width: 618px;
+        padding: 45px 40px 41px;
     }
 }
 

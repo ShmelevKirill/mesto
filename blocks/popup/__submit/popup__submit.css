@@ -10,7 +10,7 @@
     color: #FFFFFF;
     cursor: pointer;
     padding: 0;
-    margin: 18px 36px 37px 36px;
+    margin-top: 18px;
 }
 
 .popup__submit:hover {
@@ -21,6 +21,8 @@
     .popup__submit {
         width: 238px;
         height: 46px;
-        margin: 45px 22px 25px 22px;
+        font-size: 14px;
+        line-height: 17px;
     }
 }
+
