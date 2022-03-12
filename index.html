@@ -25,73 +25,59 @@
       </section>
       <section class="elements">
         <ul class="elements__list">
-          <li class="element">
-            <button class="element__trash button" type="button" title="удалить фото"></button>
-            <img class="element__image" alt="Домбай" src="./images/dombay.jpg" />
-            <div class="element__container">
-              <h2 class="element__container-title">Домбай, Россия</h2>
-              <button class="element__container-like" type="button" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
-            </div>
-          </li>
-          <li class="element">
-            <button class="element__trash button" type="button" title="удалить фото"></button>
-            <img class="element__image" alt="Айбзее - озеро в Баварии, Германия" src="./images/eibsee.jpg" />
-            <div class="element__container">
-              <h2 class="element__container-title">Айбзее, Германия</h2>
-              <button class="element__container-like" type="button" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
-            </div>
-          </li>
-          <li class="element">
-            <button class="element__trash button" type="button" title="удалить фото"></button>
-            <img class="element__image" alt="Эльбрус" src="./images/elbrus.jpg" />
-            <div class="element__container">
-              <h2 class="element__container-title">Эльбрус, Россия</h2>
-              <button class="element__container-like" type="button" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
-            </div>
-          </li>
-          <li class="element">
-            <button class="element__trash button" type="button" title="удалить фото"></button>
-            <img class="element__image" alt="Карачаевск" src="./images/karachaevsk.jpg" />
-            <div class="element__container">
-              <h2 class="element__container-title">Карачаевск, Россия</h2>
-              <button class="element__container-like" type="button" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
-            </div>
-          </li>
-          <li class="element">
-            <button class="element__trash button" type="button" title="удалить фото"></button>
-            <img class="element__image" alt="Плитвицкие озёра, Хорватия" src="./images/plitvice.jpg" />
-            <div class="element__container">
-              <h2 class="element__container-title">Плитвицкие озёра, Хорватия</h2>
-              <button class="element__container-like" type="button" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
-            </div>
-          </li>
-          <li class="element">
-            <button class="element__trash button" type="button" title="удалить фото"></button>
-            <img class="element__image" alt="Озеро Тринити" src="./images/trinity.jpg" />
-            <div class="element__container">
-              <h2 class="element__container-title">Озеро Тринити, США</h2>
-              <button class="element__container-like" type="button" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
-            </div>
-          </li>
+       
         </ul>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright">&copy; 2022. Кирилл Шмелёв</p>
     </footer>
-    <div class="popup">
+    <div class="popup popup_profile">
       <div class="popup__container">
         <button class="popup__close" type="button" title="закрыть окно"></button>
         <h2 class="popup__heading">Редактировать профиль</h2>
         <form class="popup__container-form" name="popupuser">
 
-          <input type="text" class="popup__input popup__input_name" name="user-name" placeholder="Имя пользователя" required>
-          <input type="text" class="popup__input popup__input_info" name="user-info" placeholder="Описание пользователя" required>
+          <input type="text" class="popup__input popup__input_name" name="user-name" placeholder="Имя пользователя" required minlength="2" maxlength="40">
+          <input type="text" class="popup__input popup__input_info" name="user-info" placeholder="Описание пользователя" required minlength="2" maxlength="200">
           <button type="submit" class="popup__submit">Сохранить</button>
         </form>
       </div>
     </div>
-  </div>
+    
+    <div class="popup popup_photo">
+      <div class="popup__container">
+        <button class="popup__close" type="button" title="закрыть окно"></button>
+        <h2 class="popup__heading">Новое место</h2>
+        <form class="popup__container-form popup__photo-form" name="popupuser">
+
+          <input type="text" class="popup__input popup__input_place" name="place-name" placeholder="Название" required minlength="1" maxlength="30">
+          <input type="url" class="popup__input popup__input_url" name="url" placeholder="Ссылка на картинку" required>
+          <button type="submit" class="popup__submit">Создать</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_image">
+      <div class="popup__container-img">
+        <button class="popup__close" type="button" title="закрыть"></button>
+        <img class="popup__img" src="./images/dombay.jpg" alt="Домбай">
+        <h3 class="popup__title">Домбай</h3>
+      </div>
+    </div>
+    
+    <template id="element__template">
+      <li class="element">
+        <button class="element__trash button" type="button" title="удалить фото"></button>
+        <img class="element__image" alt="Домбай" src="./images/dombay.jpg" />
+        <div class="element__container">
+          <h2 class="element__container-title"></h2>
+          <button class="element__container-like" type="button" id="like" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
+        </div>
+      </li>
+    </template>
+    
+ 
   <script src="./scripts/index.js"></script>
 </body>
 
