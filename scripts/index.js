@@ -28,84 +28,92 @@ const initialCards = [
 
 
 //Profile Popup
-const openProfile = document.querySelector('.profile__edit');
-      closeProfile = document.querySelector('.popup__close');
-      popupProfile = document.querySelector('.popup_profile');
-      profileName = document.querySelector('.profile__name');
-      profileJob = document.querySelector('.profile__status');
-      formElement = document.querySelector('.popup__container-form');
-      nameInput = document.querySelector('.popup__input_name');
-      jobInput = document.querySelector('.popup__input_info');
+const popupProfile = document.querySelector('.popup_profile');
+const profileOpen = document.querySelector('.profile__edit');
+const profileClose = popupProfile.querySelector('.popup__close');
+const profileName = document.querySelector('.profile__name');
+const profileJob = document.querySelector('.profile__status');
+const formElement = document.querySelector('.popup__container-form');
+const nameInput = formElement.querySelector('.popup__input_name');
+const jobInput = formElement.querySelector('.popup__input_info');
 
-function togglePopup() {
-    popupProfile.classList.toggle('popup_opened');
-    nameInput.value = profileName.textContent;
-    jobInput.value = profileJob.textContent;
-}
+const togglePopup = function (popup) {
+  popup.classList.toggle('popup_opened');
+};
+
+profileOpen.addEventListener('click', function () {
+  togglePopup(popupProfile);
+  nameInput.value = profileName.textContent;
+  jobInput.value = profileJob.textContent;
+});
+
+profileClose.addEventListener('click', function () {
+  togglePopup(popupProfile);
+});
 
 popupProfile.addEventListener('click', function (event) {
   if (event.target === event.currentTarget) {
-    togglePopup();
-  }
+    togglePopup(popupProfile);
+  };
 });
 
-openProfile.addEventListener('click', togglePopup);
-closeProfile.addEventListener('click', togglePopup);
-
-function formSubmitHandler(evt) {
-    evt.preventDefault();
-    profileName.textContent = nameInput.value;
-    profileJob.textContent = jobInput.value;
-    togglePopup()
+function submitFormHandler(evt) {
+  evt.preventDefault();
+  profileName.textContent = nameInput.value;
+  profileJob.textContent = jobInput.value;
+  togglePopup(popupProfile)
 }
 
-formElement.addEventListener('submit', formSubmitHandler);
-
+formElement.addEventListener('submit', submitFormHandler);
 
 //Add Photo Popup
 const popupPhoto = document.querySelector('.popup_photo');
-      popupPhotoOpen = document.querySelector('.profile__button');
-      popupPhotoClose = popupPhoto.querySelector('.popup__close');
-      photoTitle = popupPhoto.querySelector('.popup__input_place');
-      photoLink = popupPhoto.querySelector('.popup__input_url');
+const popupPhotoOpen = document.querySelector('.profile__button');
+const popupPhotoClose = popupPhoto.querySelector('.popup__close');
+const photoTitle = popupPhoto.querySelector('.popup__input_place');
+const photoLink = popupPhoto.querySelector('.popup__input_url');
 
-function togglePopupPhoto() {
-    popupPhoto.classList.toggle('popup_opened');
-}
+
+popupPhotoOpen.addEventListener('click', function () {
+    togglePopup(popupPhoto);
+});
+
+popupPhotoClose.addEventListener('click', function () {
+  togglePopup(popupPhoto);
+});
 
 popupPhoto.addEventListener('click', function (event) {
   if (event.target === event.currentTarget) {
-    togglePopupPhoto();
+    togglePopup(popupPhoto);
   }
 });
-
-popupPhotoOpen.addEventListener('click', togglePopupPhoto);
-popupPhotoClose.addEventListener('click', togglePopupPhoto);
 
 
 // Full Photo Popup
 const fullPhotoPopup = document.querySelector('.popup_image');
-      fullPhotoOpen = document.querySelector('.popup__img');
-      fullPhotoClose = fullPhotoPopup.querySelector('.popup__close');
+const fullPhotoOpen = fullPhotoPopup.querySelector('.popup__img');
+const fullPhotoClose = fullPhotoPopup.querySelector('.popup__close');
       
 
-function toggleFullPhoto() {
-    fullPhotoPopup.classList.toggle('popup_opened');
-}
+fullPhotoOpen.addEventListener('click', function () {
+  togglePopup(fullPhotoPopup);
+});
+
+fullPhotoClose.addEventListener('click', function () {
+  togglePopup(fullPhotoPopup);
+});
 
 fullPhotoPopup.addEventListener('click', function (event) {
   if (event.target === event.currentTarget) {
-    toggleFullPhoto();
+    togglePopup(fullPhotoPopup);
   }
 });
-
-fullPhotoOpen.addEventListener('click', toggleFullPhoto);
-fullPhotoClose.addEventListener('click', toggleFullPhoto);
 
 function openPhoto(titleValue, imageValue) {
   imagePopup.src = imageValue;
   imagePopupTitle.textContent = titleValue;
-  toggleFullPhoto ();
+  imagePopup.alt = titleValue;
+  togglePopup(fullPhotoPopup);
 }
 
 
@@ -117,40 +125,40 @@ function openPhoto(titleValue, imageValue) {
   
   
 function addElement(titleValue, imageValue) {
-    const createElement = elementTemplate.cloneNode(true);
-    createElement.querySelector('.element__container-title').textContent = titleValue;
-    createElement
+    const elementCreate = elementTemplate.cloneNode(true);
+    elementCreate.querySelector('.element__container-title').textContent = titleValue;
+    elementCreate
       .querySelector('.element__container-like')
       .addEventListener('click', function (event) {
         event.target.classList.toggle('element__container-like_active');
       });
-      createElement
+      elementCreate
       .querySelector('.element__trash')
       .addEventListener('click', function (event) {
         event.target.closest('.element').remove();
       });
-    const elementImage = createElement.querySelector('.element__image');
+    const elementImage = elementCreate.querySelector('.element__image');
     elementImage.src = imageValue;
     elementImage.alt = titleValue;
     elementImage.addEventListener('click', () =>
       openPhoto(titleValue, imageValue)
       );
-      return createElement;
+      return elementCreate;
 }
 
 initialCards.forEach((item) =>
 elements.append(addElement(item.name, item.link))
 );
 
-function formPhotoSubmitHandler(evt) {
+function submitPhotoFormHandler(evt) {
   evt.preventDefault();
   const title = photoTitle.value;
   const link = photoLink.value;
   elements.prepend(addElement(title, link));
-  togglePopupPhoto();
+  togglePopup(popupPhoto);
 }
 const formPhotoElement = document.querySelector('.popup__photo-form');
-formPhotoElement.addEventListener('submit', formPhotoSubmitHandler);
+formPhotoElement.addEventListener('submit', submitPhotoFormHandler);
 
 
 
