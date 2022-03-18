@@ -39,8 +39,10 @@
         <h2 class="popup__heading">Редактировать профиль</h2>
         <form class="popup__container-form" name="popupuser">
 
-          <input type="text" class="popup__input popup__input_name" name="user-name" placeholder="Имя пользователя" required minlength="2" maxlength="40">
-          <input type="text" class="popup__input popup__input_info" name="user-info" placeholder="Описание пользователя" required minlength="2" maxlength="200">
+          <input type="text" class="popup__input popup__input_name popup__input_type_error" name="user-name" placeholder="Имя пользователя" required minlength="2" maxlength="40">
+          <span class="popup__input-error">Вы пропустили это поле.</span>
+          <input type="text" class="popup__input popup__input_info popup__input_type_error" name="user-info" placeholder="Описание пользователя" required minlength="2" maxlength="200">
+          <span class="popup__input-error">Введите адрес сайта.</span>
           <button type="submit" class="popup__submit">Сохранить</button>
         </form>
       </div>
@@ -80,6 +82,7 @@
     
   </div>
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/validate.js"></script>
 </body>
 
 </html>

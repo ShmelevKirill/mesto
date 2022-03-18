@@ -57,6 +57,12 @@ popupProfile.addEventListener('click', function (event) {
   };
 });
 
+popupProfile.addEventListener('keydown', function (event) {
+  if (event.key === 'escape') {
+    togglePopup(popupProfile);
+  };
+});
+
 function submitFormHandler(evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
