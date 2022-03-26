@@ -26,8 +26,6 @@ const initialCards = [
   }
 ];
 
-
-//Profile Popup
 const popupProfile = document.querySelector('.popup_profile');
 const profileOpen = document.querySelector('.profile__edit');
 const profileClose = popupProfile.querySelector('.popup__close');
@@ -37,6 +35,24 @@ const formElement = document.querySelector('.popup__container-form');
 const nameInput = formElement.querySelector('.popup__input_name');
 const jobInput = formElement.querySelector('.popup__input_info');
 const popup = document.querySelector('.popup');
+
+const popupPhoto = document.querySelector('.popup_photo');
+const popupPhotoOpen = document.querySelector('.profile__button');
+const popupPhotoClose = popupPhoto.querySelector('.popup__close');
+const photoTitle = popupPhoto.querySelector('.popup__input_place');
+const photoLink = popupPhoto.querySelector('.popup__input_url');
+
+const fullPhotoPopup = document.querySelector('.popup_image');
+const fullPhotoOpen = fullPhotoPopup.querySelector('.popup__img');
+const fullPhotoClose = fullPhotoPopup.querySelector('.popup__close');
+
+const elementTemplate = document.querySelector('#element__template').content;
+const elements = document.querySelector('.elements__list');
+const imagePopup = document.querySelector('.popup__img');
+const imagePopupTitle = document.querySelector('.popup__title')
+
+
+//Profile Popup
 
 const togglePopup = function (popup) {
   popup.classList.toggle('popup_opened');
@@ -77,8 +93,6 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-
-
 function submitFormHandler(evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
@@ -88,13 +102,8 @@ function submitFormHandler(evt) {
 
 formElement.addEventListener('submit', submitFormHandler);
 
-//Add Photo Popup
-const popupPhoto = document.querySelector('.popup_photo');
-const popupPhotoOpen = document.querySelector('.profile__button');
-const popupPhotoClose = popupPhoto.querySelector('.popup__close');
-const photoTitle = popupPhoto.querySelector('.popup__input_place');
-const photoLink = popupPhoto.querySelector('.popup__input_url');
 
+//Add Photo Popup
 
 popupPhotoOpen.addEventListener('click', function () {
     togglePopup(popupPhoto);
@@ -112,10 +121,6 @@ popupPhoto.addEventListener('click', function (event) {
 
 
 // Full Photo Popup
-const fullPhotoPopup = document.querySelector('.popup_image');
-const fullPhotoOpen = fullPhotoPopup.querySelector('.popup__img');
-const fullPhotoClose = fullPhotoPopup.querySelector('.popup__close');
-      
 
 fullPhotoOpen.addEventListener('click', function () {
   togglePopup(fullPhotoPopup);
@@ -140,11 +145,6 @@ function openPhoto(titleValue, imageValue) {
 
 
 //Add Elements
-  const elementTemplate = document.querySelector('#element__template').content;
-  const elements = document.querySelector('.elements__list');
-  const imagePopup = document.querySelector('.popup__img');
-  const imagePopupTitle = document.querySelector('.popup__title')
-  
   
 function addElement(titleValue, imageValue) {
     const elementCreate = elementTemplate.cloneNode(true);
