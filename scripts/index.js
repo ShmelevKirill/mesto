@@ -36,10 +36,19 @@ const profileJob = document.querySelector('.profile__status');
 const formElement = document.querySelector('.popup__container-form');
 const nameInput = formElement.querySelector('.popup__input_name');
 const jobInput = formElement.querySelector('.popup__input_info');
+const popup = document.querySelector('.popup');
 
 const togglePopup = function (popup) {
   popup.classList.toggle('popup_opened');
 };
+
+function openPopup(popup) {
+  popup.classList.add('popup_opened');
+}
+
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
+}
 
 profileOpen.addEventListener('click', function () {
   togglePopup(popupProfile);
@@ -57,11 +66,18 @@ popupProfile.addEventListener('click', function (event) {
   };
 });
 
-popupProfile.addEventListener('keydown', function (event) {
-  if (event.key === 'escape') {
-    togglePopup(popupProfile);
-  };
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+      const popupActive = document.querySelector(".popup_opened");
+      closePopup(popupActive);
+      closePopup(popupProfile);
+      closePopup(popupPhoto);
+      closePopup(fullPhotoPopup);
+  }
 });
+
+
 
 function submitFormHandler(evt) {
   evt.preventDefault();
