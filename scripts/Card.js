@@ -1,9 +1,9 @@
 export default class Card {
-    constructor(data, cardTemplate, handleCardClick) {
+    constructor(data, cardTemplate, handleClickCard) {
         this._name = data.name;
         this._link = data.link;
         this._cardTemplate = cardTemplate;
-        this._handleCardClick = handleCardClick;
+        this._handleClickCard = handleClickCard;
     }
 
     _getTemplate = () => {
@@ -11,7 +11,7 @@ export default class Card {
     }
 
     _setEventListeners = () => {
-        this._cardImage.addEventListener('click', () => this._handleCardClick(this._name, this._link));
+        this._cardImage.addEventListener('click', () => this._handleClickCard(this._name, this._link));
         this._cardElement.querySelector('.element__container-like').addEventListener('click', this._likePhoto);
         this._cardElement.querySelector('.element__trash').addEventListener('click', this._deletePhoto);
     }
