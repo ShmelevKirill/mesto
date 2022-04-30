@@ -1,22 +1,31 @@
+import dombayImage from "../images/dombay.jpg"
+import eibseeImage from "../images/eibsee.jpg"
+import elbrusImage from "../images/elbrus.jpg"
+import karachaevskImage from "../images/karachaevsk.jpg"
+import plitviceImage from "../images/plitvice.jpg"
+import trinityImage from "../images/trinity.jpg"
+
 export const initialCards = [{
   name: "Домбай, Россия",
-  link: "./images/dombay.jpg",
+  link: dombayImage,
 }, {
   name: "Айбзее, Германия",
-  link: "./images/eibsee.jpg",
+  link: eibseeImage,
 }, {
   name: "Эльбрус, Россия",
-  link: "./images/elbrus.jpg",
+  link: elbrusImage,
 }, {
   name: "Карачаевск, Россия",
-  link: "./images/karachaevsk.jpg",
+  link: karachaevskImage,
 }, {
   name: "Плитвицкие озёра, Хорватия",
-  link: "./images/plitvice.jpg",
+  link: plitviceImage,
 }, {
   name: "Озеро Тринити, США",
-  link: "./images/trinity.jpg",
+  link: trinityImage,
 }, ];
+
+
 export const config = {
   formSelector: '.popup__container-form',
   inputSelector: '.popup__input',
