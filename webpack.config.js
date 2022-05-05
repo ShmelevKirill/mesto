@@ -12,12 +12,12 @@ module.exports = {
     filename: 'main.js',
     publicPath: '',
   },
-  mode: 'development',
+  mode: "development",
   devServer: {
-    contentBase: path.resolve(__dirname, './dist'),
+    static: path.resolve(__dirname, "./dist"),
+    compress: true, 
+    port: 8080, 
     open: true,
-    compress: true,
-    port: 8080
   },
   module: {
     rules: [{
