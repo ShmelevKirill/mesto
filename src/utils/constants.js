@@ -34,8 +34,8 @@ export const config = {
 	inputSelector: '.popup__input',
 	submitButtonSelector: '.popup__submit',
 	inactiveButtonClass: 'popup__submit_disabled',
-	inputError: 'popup__input_type_error',
-	errorContainer: 'popup__input-error',
+	inputErrorClass: 'popup__input_type_error',
+	errorClass: 'popup__input-error',
 };
 export const popupProfile = ".popup_profile";
 export const popupPhoto = ".popup_photo";
