@@ -23,6 +23,7 @@
 .element__container-title{color:#000;font-size:24px;font-weight:900;line-height:29px;margin:0;overflow:hidden;padding:25px 30px 31px 21px;text-overflow:ellipsis;white-space:nowrap}
 .element__container-like{align-self:center;background-color:#00000000;background-image:url(e3b9ba5840ebe97bc077.svg);background-repeat:no-repeat;border:none;box-sizing:border-box;cursor:pointer;height:19px;margin:0 20px 0 0;padding:11px;transition:all .5s ease;width:22px}.element__container-like:hover{opacity:.5}
 .element__container-like_active{background-image:url(35948469632d0421d697.svg)}.element__container-like_active:hover{opacity:.5}
+.element__container_like-count{color:#000;font-size:13px;font-weight:400;line-height:16px}
 .popup__container{background:#fff;border-radius:10px;box-shadow:0 0 25px rgba(0,0,0,.15);box-sizing:border-box;max-height:330px;max-width:430px;padding:34px 36px 37px;position:relative}@media (max-width:510px){.popup__container{max-height:322px;max-width:282px;padding:25px 22px}}
 .popup__input{border:none;border-bottom:1px solid rgba(0,0,0,.2);color:#000;font-size:14px;line-height:17px;margin-bottom:29px;outline:none;overflow:hidden;padding-bottom:7px;text-overflow:ellipsis;white-space:nowrap;width:358px}@media (max-width:510px){.popup__input{width:100%}}
 .popup__input_type_error{border-color:red;margin-bottom:5px}
