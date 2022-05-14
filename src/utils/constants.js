@@ -39,11 +39,17 @@ export const config = {
 };
 export const popupProfile = ".popup_profile";
 export const popupPhoto = ".popup_photo";
+export const popupAvatar = ".popup_avatar";
 export const popupFullPhoto = ".popup_image";
 export const profileName = ".profile__name";
 export const profileJob = ".profile__status";
 export const cardTemplate = ".element__template";
 export const cardsContainer = ".elements__list";
+export const popupDelete = ".popup_photo-delete";
+export const formAvatar = document.querySelector('.popup__avatar-form');
+export const editAvatar = document.querySelector('.profile__photo');
+export const profilePhoto = document.querySelector('.profile__avatar');
+export const linkNewAvatar = document.querySelector('.popup__avatar_url');
 export const profileForm = document.querySelector('.popup__profile-form');
 export const cardForm = document.querySelector('.popup__photo-form');
 export const profileNameInput = document.querySelector('.popup__input_name');

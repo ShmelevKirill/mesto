@@ -22,9 +22,17 @@ import {
 	cardLinkInput,
 	profileEditButton,
 	cardAddButton,
-	config
+	config,
+	formAvatar,
+    editAvatar,
+    profilePhoto,
+    linkNewAvatar,
+    popupAvatar,
+    popupDelete
 }
 from '../utils/constants.js';
+
+const formAvatarValidator = new FormValidator(formAvatar, config)
 const formEditValidator = new FormValidator(profileForm, config);
 const photoAddValidator = new FormValidator(cardForm, config);
 const openPopupImage = new PopupWithImage(popupFullPhoto);
@@ -35,6 +43,17 @@ const userInfo = new UserInfo({
 const handleCardClick = (name, link) => {
 	openPopupImage.open(name, link);
 };
+
+const popupAvatarForm = new PopupWithForm(popupAvatar, {
+	handleFormSubmit: () => {
+		profilePhoto.src = linkNewAvatar.value;
+	},
+});
+
+const popupDelCard = new PopupWithForm(popupDelete, {
+	handleFormSubmit: () => {},
+});
+
 const createCard = (data) => {
 	const card = new Card(data, cardTemplate, handleCardClick);
 	return card.generateCard();
@@ -79,8 +98,19 @@ cardAddButton.addEventListener('click', () => {
 	popupAddForm.open();
 	photoAddValidator.resetValidationState();
 });
+
+editAvatar.addEventListener('click', () => {
+	popupAvatarForm.open();
+	formAvatarValidator.resetValidationState();
+});
+
 formEditValidator.enableValidation();
 photoAddValidator.enableValidation();
+
+formAvatarValidator.enableValidation();
+
 openPopupImage.setEventListeners();
 popupEditForm.setEventListeners();
 popupAddForm.setEventListeners();
+popupAvatarForm.setEventListeners();
+popupDelCard.setEventListeners();
