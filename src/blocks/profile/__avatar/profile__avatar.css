@@ -4,12 +4,8 @@
     width: 120px;
     padding: 0;
     margin-right: 28px;
-    cursor: pointer;
 }
 
-.profile__avatar:hover {
-    opacity: 0.8;
-}
 
 @media (max-width: 425px) {
     .profile__avatar {

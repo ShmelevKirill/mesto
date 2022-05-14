@@ -14,7 +14,10 @@
     </header>
     <main class="content">
       <section class="profile">
+        <div class="profile__photo">
         <img class="profile__avatar" alt="фото профиля" src="<%=require('./images/avatar.jpg')%>" />
+      <div class="profile__avatar-cover"></div>
+      </div>
         <div class="profile__info">
           <h1 class="profile__name">Жак-Ив Кусто</h1>
           <button class="profile__edit button" type="button" title="редактировать профиль"></button>
@@ -100,6 +103,36 @@
         <h3 class="popup__title"></h3>
       </div>
     </div>
+
+    <div class="popup popup_photo-delete">
+      <div class="popup__container">
+        <button class="popup__close" type="button" title="закрыть окно"></button>
+        <h2 class="popup__heading popup__heading-del">Вы уверены?</h2>
+        <form class="popup__container-form popup__delete-form" name="popupcarddelete" novalidate>
+          <button type="submit" class="popup__submit">Да</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup popup_avatar">
+      <div class="popup__container">
+        <button class="popup__close" type="button" title="закрыть окно"></button>
+        <h2 class="popup__heading">Обновить аватар</h2>
+        <form class="popup__container-form popup__avatar-form" name="popupavatar" novalidate>
+
+          <input 
+            type="url" 
+            class="popup__input popup__avatar_url" 
+            id="url-avatar" 
+            name="avatarurl" 
+            placeholder="Ссылка на картинку" 
+            required
+            >
+          <span class="popup__input-error url-avatar-error"></span>
+          <button type="submit" class="popup__submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
     
     <template class="element__template">
       <li class="element">
@@ -107,7 +140,9 @@
         <img class="element__image"  />
         <div class="element__container">
           <h2 class="element__container-title"></h2>
+          <div class="element__like">
           <button class="element__container-like" type="button" id="like" title="Оценить фотографию" aria-label="Оценить фотографию"></button>
+          <span class="element__container_like-count">0</span>
         </div>
       </li>
     </template>
