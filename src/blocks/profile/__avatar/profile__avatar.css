@@ -5,6 +5,10 @@
     padding: 0;
     margin-right: 28px;
     height: 120px;
+    box-sizing: border-box;
+    display: block;
+    object-fit: cover;
+    overflow: hidden; 
 }
 
 
