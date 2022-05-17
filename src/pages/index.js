@@ -97,8 +97,8 @@ const popupEditForm = new PopupWithForm(popupProfile, {
     handleFormSubmit: (data) => {
         popupEditForm.renderLoading(true),
         api.setUserInfo({
-            name: data.name,
-            about: data.profession,
+            name: data.username,
+            about: data.userstatus,
         }).then((infoData) => {
             userInfo.setUserInfo({
                 name: infoData.name,
