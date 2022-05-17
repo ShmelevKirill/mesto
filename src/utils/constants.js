@@ -16,7 +16,6 @@ export const profileNameInput = document.querySelector('.popup__input_name');
 export const profileJobInput = document.querySelector('.popup__input_info');
 export const profileEditButton = document.querySelector('.profile__edit');
 export const cardAddButton = document.querySelector('.profile__button');
-
 export const config = {
 	formSelector: '.popup__container-form',
 	inputSelector: '.popup__input',

@@ -27,8 +27,7 @@ import {
     profilePhoto,
     popupAvatar,
     popupDelete
-}
-from '../utils/constants.js';
+} from '../utils/constants.js';
 
 const formAvatarValidator = new FormValidator(formAvatar, config)
 const formEditValidator = new FormValidator(profileForm, config);
@@ -98,7 +97,7 @@ const popupEditForm = new PopupWithForm(popupProfile, {
         popupEditForm.renderLoading(true),
         api.setUserInfo({
             name: data.username,
-            about: data.userstatus,
+            about: data.userabout,
         }).then((infoData) => {
             userInfo.setUserInfo({
                 name: infoData.name,
@@ -116,7 +115,7 @@ const popupAvatarForm = new PopupWithForm(popupAvatar, {
     handleFormSubmit: (data) => {
         popupAvatarForm.renderLoading(true),
         api.setUserAvatar({
-            avatar: data["link-avatar"],
+            avatar: data["linkavatar"],
         }).then((data) => {
             userInfo.setUserInfo({
                 name: data.name,
@@ -134,8 +133,8 @@ const popupPhotoAddForm = new PopupWithForm(popupPhoto, {
     handleFormSubmit: (data) => {
         popupPhotoAddForm.renderLoading(true),
         api.addCard({
-            name: data.title,
-            link: data.link,
+            name: data.phototitle,
+            link: data.photolink,
         }).then((data) => {
             const newCard = createCard(data);
             cardSection.addItem(newCard);
