@@ -5,7 +5,7 @@ import UserInfo from '../components/UserInfo.js';
 import PopupWithForm from '../components/PopupWithForm.js';
 import PopupWithImage from '../components/PopupWithImage.js';
 import FormValidator from '../components/FormValidator.js';
-import PopupWithConfirm from "../components/PopupWithConfirm.js";
+import PopupWithConfirmation from "../components/PopupWithConfirmation.js";
 import Api from "../components/Api.js";
 import {
     popupProfile,
@@ -33,7 +33,7 @@ const formAvatarValidator = new FormValidator(formAvatar, config)
 const formEditValidator = new FormValidator(profileForm, config);
 const formPhotoAddValidator = new FormValidator(cardForm, config);
 const openPopupImage = new PopupWithImage(popupFullPhoto);
-const popupDeleteCard = new PopupWithConfirm(popupDelete);
+const popupDeleteCard = new PopupWithConfirmation(popupDelete);
 const userInfo = new UserInfo({
     nameSelector: profileName,
     descriptionSelector: profileJob,
